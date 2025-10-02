@@ -2,10 +2,10 @@ fastapi==0.104.1
 uvicorn[standard]==0.24.0
 python-multipart==0.0.6
 
-langchain==0.1.20
-langchain-community==0.0.38
+langchain==0.2.11
+langchain-community==0.2.10
 langchain-openai==0.1.8
-langchain-core==0.1.52
+langchain-core==0.2.23
 
 pinecone-client==3.2.2
 sentence-transformers==2.2.2

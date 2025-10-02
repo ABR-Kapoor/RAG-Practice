@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-OPENROUTER_API_KEY = os.getenv("OPEN_ROUTER")
+OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
 
 def get_llm_chain(retriver):
     llm = ChatOpenAI(
