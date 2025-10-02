@@ -1,24 +1,23 @@
-fastapi
-uvicorn[standard]
-python-multipart
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+python-multipart==0.0.6
 
-langchain
-langchain-community
-langchain-groq
-langchain-core
+langchain==0.0.352
+langchain-community==0.0.38
+langchain-openai==0.0.5
+langchain-core==0.1.10
 
-pinecone
+pinecone-client==2.2.4
+sentence-transformers==2.2.2
 
-langchain-google-genai
+pypdf==3.17.1
 
-pyPDF
+python-dotenv==1.0.0
 
-python-dotenv
+requests==2.31.0
+pydantic==2.5.0
+tqdm==4.66.1
 
-requests
-pydantic
-tqdm
+loguru==0.7.2
 
-loguru
-
-aiofiles
+aiofiles==23.2.1
