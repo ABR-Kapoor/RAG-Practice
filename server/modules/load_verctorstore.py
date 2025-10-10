@@ -10,17 +10,19 @@ from langchain_community.embeddings import SentenceTransformerEmbeddings
 
 load_dotenv()
 
-OPENROUTER_API_KEY = os.getenv("OPEN_ROUTER")
-PINECONE_API_KEY = os.getenv("PINECODE_API_KEY")
+OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
+PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
 PINECONE_ENV = "us-east-1"
-PINECONE_INDEX_NAME = "babybot-medical-index"
+PINECONE_INDEX_NAME = os.getenv("PINECONE_INDEX_NAME")
 
-os.environ["OPENAI_API_KEY"] = OPENROUTER_API_KEY
+# Only set OPENAI_API_KEY if OPENROUTER_API_KEY is not None
+if OPENROUTER_API_KEY:
+    os.environ["OPENAI_API_KEY"] = OPENROUTER_API_KEY
 
 UPLOAD_DIR = "./uploads_docs"
 os.makedirs(UPLOAD_DIR, exist_ok=True)
 
-# Initialize Pinecone instance
+# Initialize Pinecone
 pc = Pinecone(api_key=PINECONE_API_KEY)
 spec = ServerlessSpec(cloud="aws", region=PINECONE_ENV)
 existing_indexes = [index.name for index in pc.list_indexes()]

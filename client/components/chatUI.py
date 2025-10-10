@@ -2,7 +2,7 @@ import streamlit as st
 from utils.api import query_bot 
 
 def render_chatui():
-    st.subheader("chat with BabyBot :speech_balloon:")
+    st.subheader("chat with Noddy Bot :speech_balloon:")
     if "messages" not in st.session_state:
         st.session_state.messages = []
         

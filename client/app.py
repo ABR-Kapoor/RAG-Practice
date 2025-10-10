@@ -5,8 +5,8 @@ from components.history_download import render_history_download
 
 
 
-st.set_page_config(page_title="BabyBot Medical Chat", layout="wide")
-st.title("BabyBot Medical Chat :robot_face:")
+st.set_page_config(page_title="Noddy Bot Candidate Resume HR chat", layout="wide")
+st.title("Noddy Bot Candidate Resume HR Chat")
 
 render_upload()
 render_chatui()
